@@ -1,23 +1,19 @@
-//Controls how star ratings are shown and allows interaction using state and events
-
 import React, { Component } from 'react';
-import { IoIosStar, IoIosStarOutline } from 'react-icons/io'; //import star icons such as a filled star and outlined star
+import { IoIosStar, IoIosStarOutline } from 'react-icons/io';
 
-//class component called Rating
 class Rating extends Component {
-    constructor(props) { //props is an object that holds data passed from the parent component.
-        super(props); //Calls the parent class constructor – needed to access this.props
-        this.state = { rating: this.props.rating }; //Data that a component uses and can change. (this.props.rating is how you access the prop and its value from App)
+    constructor(props) {
+        super(props);
+        this.state = { rating: this.props.rating };
     }
 
     handleClick(ratingValue) {
-        this.setState({ rating: ratingValue }) //setState is like an update function that happens as soon as you click a star to change the rating
-    } //When a star is clicked, this method: Updates the component’s state using setState and causes the UI to re-render with the new rating.
+        this.setState({ rating: ratingValue })
+    }
 
-    //This code is rendering stars for a rating system.
     render() {
         return (
-            <div>
+            <div style={styles.starStyle}>
                 <h1>Rating: {this.state.rating}</h1>
                 {this.state.rating >= 1 ? (
                     <IoIosStar onClick={this.handleClick.bind(this, 1)} />
@@ -50,3 +46,9 @@ class Rating extends Component {
 }
 
 export default Rating;
+
+const styles = {
+    starStyle: {
+        color: "orange"
+    }
+};

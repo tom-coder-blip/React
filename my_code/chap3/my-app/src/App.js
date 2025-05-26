@@ -1,14 +1,16 @@
 //Displays the main UI and reuses the <Rating /> component with different props
 
-import React, { Component } from 'react';
+import React, { Component } from 'react'; //Component is the base class for creating class-based components.
 import Products from './Products';
 import { Button, Badge } from 'react-bootstrap';
-import Rating from './Rating';
+import Rating from './Rating'; //This imports a custom component named Rating
 
+//This defines a React component class named App which extends from Component
 class App extends Component {
-  render() {
+  render() { //It defines what JSX (HTML-like syntax) the component should output to the UI.
     const isValid = true;
 
+    //JSX Return Block
     return (
       <div style={{ padding: '20px' }}>
         <Products />
