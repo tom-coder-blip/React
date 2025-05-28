@@ -1,0 +1,24 @@
+{
+  "student1": 
+    {
+      "username": "Tom",
+      "email": "vumatom10@gmail.com"
+    },
+    "student2": 
+    {
+      "username": "Mieka",
+      "email": "mieka@gmail.com.com"
+    },
+    "student3": 
+    {
+      "username": "Sibu",
+      "email": "sibu@gmail.com.com"
+    },
+    "student4": 
+    {
+      "username": "lindo",
+      "email": "lindo@gmail.com"
+    }
+}
+
+
