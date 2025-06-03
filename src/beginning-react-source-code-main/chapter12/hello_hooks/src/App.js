@@ -8,6 +8,9 @@ const App = () => {
   const usersUrl = 'https://jsonplaceholder.typicode.com/users';
   const postsUrl = 'https://jsonplaceholder.typicode.com/posts';
   const todosUrl = 'https://jsonplaceholder.typicode.com/todos';
+  const commentsUrl = 'https://jsonplaceholder.typicode.com/posts/1/comments';
+  const photosUrl = 'https://jsonplaceholder.typicode.com/posts/1/photos';
+
   //initial state
   const [requested, setRequested] = useState(postsUrl);
   const data = useFetch(requested);
@@ -35,6 +38,14 @@ const App = () => {
       {/* displays data from the todos collection */}
       <Button variant="link" onClick={() => setRequested(todosUrl)}>
         Todos
+      </Button>
+
+      <Button variant="link" onClick={() => setRequested(commentsUrl)}>
+        Comments
+      </Button>
+
+      <Button variant="link" onClick={() => setRequested(photosUrl)}>
+        Photos
       </Button>
       <br />
       Requested: {requested}
